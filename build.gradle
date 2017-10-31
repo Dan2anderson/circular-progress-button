@@ -13,6 +13,9 @@ buildscript {
 def isReleaseBuild() {
     return version.contains("SNAPSHOT") == false
 }
+task wrapper(type: Wrapper){
+    gradleVersion = '3.0.0'
+}
 
 allprojects {
     version = VERSION_NAME
